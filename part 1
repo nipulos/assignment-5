@@ -1,4 +1,4 @@
-#all imported modules i need
+#all imported modules i need     i also had to change few things after the test because I misunderstood SVM modeling
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
