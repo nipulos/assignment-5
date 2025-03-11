@@ -1,0 +1,6 @@
+From my code, I believe the random forest model is best for this. I can immediately rule out decision tree because the margin of difference between all 3 statistics shown (accuracy, precision and recall)
+is too far off the other two. The recall is off by 3 %, and then compared to the random forest, the accuracy is off by 1 % from the random forest. 
+Now the SVM is not too far from the random forest, just one % off the precision, but it's still less than. It's an obvious pick that random forest is best because it either does best ot ties
+in each category, hitting a 96% accuracy, 96% precision, and a 99% recall. Before doing the testing, I thought the SVM model would be best to be honest based on how the data would work.
+I thought measuring the linear relationship with SVM would be best because of how medical data usually is. But I stood corrected with what my output was. Although I'm not surprised decision
+tree is the worst one because it's not specific enough for this data. 
