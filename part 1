@@ -1,0 +1,36 @@
+#all imported modules i need
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, precision_score, recall_score
+#learning the data sets
+breast_cancer = datasets.load_breast_cancer()
+X, y = breast_cancer.data, breast_cancer.target  #i believe this is the data set that somehow is already in sklearn. not sure how it is lol
+#Splitting to 80 training and 20 testing
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+#model learning and training
+svm_model = SVC(kernel='linear', random_state=42)
+dt_model = DecisionTreeClassifier(random_state=42)
+rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
+svm_model.fit(X_train, y_train)
+dt_model.fit(X_train, y_train)
+rf_model.fit(X_train, y_train)
+y_pred_svm = svm_model.predict(X_test)
+y_pred_dt = dt_model.predict(X_test)
+y_pred_rf = rf_model.predict(X_test)
+#printing the output
+def evaluate_model(name, y_test, y_pred):
+    accuracy = accuracy_score(y_test, y_pred)
+    precision = precision_score(y_test, y_pred)
+    recall = recall_score(y_test, y_pred)
+    
+    print(f"\n{name} Performance:")
+    print(f"Accuracy: {accuracy:.2f}")
+    print(f"Precision: {precision:.2f}")
+    print(f"Recall: {recall:.2f}")
+
+evaluate_model("SVM", y_test, y_pred_svm)
+evaluate_model("Decision Tree", y_test, y_pred_dt)
+evaluate_model("Random Forest", y_test, y_pred_rf)
