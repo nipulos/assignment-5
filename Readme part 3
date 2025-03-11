@@ -1,0 +1,19 @@
+The intent for this code was to see which model design fits well with the data given to me on sklearn. I was given a breast cancer data by sklearn (still don't really know where that data is),
+and found how that data can be interpretted through different models. The three things that I measured was accuracy which was how accurate the data presented was.
+Then there was precision which showed the percent the positive data was right (True positives). Then recall which measured how well positive cases were made. 
+All three models did well but random forest was the best. 
+
+From looking up what this data could look like, I gathered that the data consisted values of 0-1 for identifying the cancer (0 being cancerous and 1 being noncancerous). 
+Some key features that I searched up online that this data couldn've given me were 
+Radius of the cancer cell                                                                                                                                                 
+Texture of the cancer cell (standard deviation of gray-scale values)
+Perimeter of the cancer cell
+Area of the cancer cell
+Smoothness of the cancer cell
+Compactness of the cancer cell
+Concavity of the cancer cell
+Concave points of the cancer cell
+Symmetry of the cancer cell
+Fractal dimension of the cancer cell
+                                                                                                                                                    
+                                                                                                                                                    
